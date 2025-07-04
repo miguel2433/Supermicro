@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorador de Servidores Supermicro para todas las gammas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <h1 class="text-xl md:text-2xl font-bold text-teal-700">Explorador Supermicro</h1>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#selector" class="text-stone-600 hover:text-teal-600 font-medium">Selector de Soluciones</a>
+                    <a href="#comparativa" class="text-stone-600 hover:text-teal-600 font-medium">Análisis Comparativo</a>
+                    <a href="#soporte" class="text-stone-600 hover:text-teal-600 font-medium">Soporte y TCO</a>
+                    <a href="#adquisicion" class="text-stone-600 hover:text-teal-600 font-medium">Guía de Adquisición</a>
+                    <a href="#fuentes" class="text-stone-600 hover:text-teal-600 font-medium">Fuentes</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+        
+        <section id="intro" class="text-center py-12 md:py-20">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-stone-900 mb-4">Encuentre la Solución de Servidor Perfecta</h2>
+            <p class="max-w-3xl mx-auto text-lg md:text-xl text-stone-600">
+                Esta herramienta interactiva está diseñada para ayudar a los usuarios a navegar por el portafolio de Supermicro y encontrar la infraestructura ideal para cada carga de trabajo, desde el renderizado 3D hasta la distribución de contenido global, clasificadas por su gama de rendimiento.
+            </p>
+        </section>
+
+        <section id="selector" class="py-12 md:py-16 bg-white rounded-2xl shadow-lg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h3 class="text-2xl md:text-3xl font-bold text-stone-900">1. Selector de Soluciones por Gama y Carga de Trabajo</h3>
+                    <p class="mt-4 text-lg text-stone-600">Comience seleccionando la gama de rendimiento que mejor se adapte a sus necesidades, luego afine su búsqueda eligiendo una carga de trabajo específica.</p>
+                </div>
+
+                <div class="mb-8 text-center">
+                    <h4 class="text-xl font-semibold text-stone-700 mb-4">Seleccione la Gama:</h4>
+                    <div id="tier-buttons" class="flex flex-wrap justify-center gap-3 md:gap-4">
+                        <button class="tier-btn px-4 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold text-teal-700 bg-white rounded-full shadow-md hover:bg-teal-500 hover:text-white transition-all duration-300 ease-in-out transform hover:-translate-y-1" data-tier="entry-level">Gama Baja</button>
+                        <button class="tier-btn px-4 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold text-teal-700 bg-white rounded-full shadow-md hover:bg-teal-500 hover:text-white transition-all duration-300 ease-in-out transform hover:-translate-y-1" data-tier="mid-range">Gama Media</button>
+                        <button class="tier-btn px-4 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold text-teal-700 bg-white rounded-full shadow-md hover:bg-teal-500 hover:text-white transition-all duration-300 ease-in-out transform hover:-translate-y-1" data-tier="high-end">Gama Alta</button>
+                    </div>
+                </div>
+                
+                <div class="mb-12 text-center" id="workload-section" style="display:none;">
+                    <h4 class="text-xl font-semibold text-stone-700 mb-4">Seleccione la Carga de Trabajo:</h4>
+                    <div id="workload-buttons" class="flex flex-wrap justify-center gap-3 md:gap-4">
+                    </div>
+                </div>
+
+                <div id="recommendation-output" class="mt-8 transition-opacity duration-500">
+                    <p class="text-center text-stone-500 italic">Seleccione una gama y una carga de trabajo para ver las recomendaciones.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="comparativa" class="py-12 md:py-16 mt-12">
+             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h3 class="text-2xl md:text-3xl font-bold text-stone-900">2. Análisis Comparativo por Gama</h3>
+                    <p class="mt-4 text-lg text-stone-600">Visualice y compare las capacidades clave entre las diferentes líneas de servidores de Supermicro. Utilice el menú desplegable para seleccionar la métrica que desea comparar en el gráfico. El gráfico se ajustará a la gama de servidores seleccionada.</p>
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg">
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-6">
+                        <label for="chart-tier-selector" class="font-semibold text-stone-700">Seleccionar Gama para el Gráfico:</label>
+                        <select id="chart-tier-selector" class="w-full sm:w-auto bg-gray-50 border border-gray-300 text-stone-900 text-sm rounded-lg focus:ring-teal-500 focus:border-teal-500 block p-2.5">
+                            <option value="entry-level">Gama Baja</option>
+                            <option value="mid-range" selected>Gama Media</option>
+                            <option value="high-end">Gama Alta</option>
+                            <option value="all">Todas las Gamas</option>
+                        </select>
+                        <label for="chart-metric-selector" class="font-semibold text-stone-700">Comparar por:</label>
+                        <select id="chart-metric-selector" class="w-full sm:w-auto bg-gray-50 border border-gray-300 text-stone-900 text-sm rounded-lg focus:ring-teal-500 focus:border-teal-500 block p-2.5">
+                            <option value="maxMemory">Capacidad Máxima de Memoria (TB)</option>
+                            <option value="maxBays">Máximo de Bahías de Unidades</option>
+                            <option value="maxPcieSlots">Máximo de Ranuras PCIe</option>
+                        </select>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="comparisonChart"></canvas>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <section id="soporte" class="py-12 md:py-16 mt-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h3 class="text-2xl md:text-3xl font-bold text-stone-900">3. Soporte, Gestión y Costo Total de Propiedad (TCO)</h3>
+                     <p class="mt-4 text-lg text-stone-600">El valor de un servidor va más allá de su rendimiento inicial. Aquí encontrará información clave sobre las garantías, las herramientas de gestión y las iniciativas de "Green Computing" que reducen el TCO a largo plazo.</p>
+                </div>
+                <div class="space-y-6 max-w-4xl mx-auto" id="accordion-container">
+                    
+                    <div class="accordion-item bg-white rounded-xl shadow-md overflow-hidden">
+                        <button class="accordion-button w-full flex justify-between items-center text-left p-5 font-semibold text-lg text-stone-700 hover:bg-stone-100 transition">
+                            <span>Garantía y Servicios RMA</span>
+                            <span class="accordion-arrow transition-transform duration-300">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 border-t border-stone-200">
+                                <p class="text-stone-600">Supermicro ofrece un marco de soporte estructurado para garantizar la fiabilidad y minimizar el tiempo de inactividad<sup class="source-link"><a href="#source-1">1</a></sup><sup class="source-link"><a href="#source-2">2</a></sup>.</p>
+                                <ul class="mt-4 space-y-2 list-disc list-inside text-stone-600">
+                                    <li><strong>Garantía Estándar:</strong> 3 años para mano de obra y 1 año para piezas en la mayoría de SuperServers<sup class="source-link"><a href="#source-1">1</a></sup>.</li>
+                                    <li><strong>Reemplazo Anticipado:</strong> 1 año para piezas en SuperServers, asegurando una rápida recuperación<sup class="source-link"><a href="#source-1">1</a></sup>.</li>
+                                    <li><strong>Proceso RMA:</strong> Proceso claro para la devolución y reparación de mercancías, con soporte técnico accesible<sup class="source-link"><a href="#source-2">2</a></sup>.</li>
+                                    <li><strong>Nota Clave:</strong> El soporte completo se aplica a sistemas ensamblados en instalaciones de Supermicro<sup class="source-link"><a href="#source-2">2</a></sup>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-white rounded-xl shadow-md overflow-hidden">
+                        <button class="accordion-button w-full flex justify-between items-center text-left p-5 font-semibold text-lg text-stone-700 hover:bg-stone-100 transition">
+                            <span>Suite de Software de Gestión</span>
+                             <span class="accordion-arrow transition-transform duration-300">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 border-t border-stone-200">
+                                <p class="text-stone-600">Un ecosistema de gestión cohesivo y multicapa que simplifica la operación y el mantenimiento<sup class="source-link"><a href="#source-3">3</a></sup>.</p>
+                                <ul class="mt-4 space-y-2 list-disc list-inside text-stone-600">
+                                    <li><strong>Nodo Único:</strong> IPMI para control remoto (KVM-over-IP) y SuperDoctor 5 para monitoreo<sup class="source-link"><a href="#source-3">3</a></sup>.</li>
+                                    <li><strong>Gran Escala:</strong> Supermicro Server Manager (SSM) para la gestión de flotas de servidores<sup class="source-link"><a href="#source-3">3</a></sup>.</li>
+                                    <li><strong>Nivel de Centro de Datos:</strong> SuperCloud Composer para orquestación e infraestructura definida por software<sup class="source-link"><a href="#source-3">3</a></sup>.</li>
+                                    <li><strong>Estándares Abiertos:</strong> Soporte para la API Redfish®, facilitando la integración con herramientas de terceros<sup class="source-link"><a href="#source-3">3</a></sup>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="accordion-item bg-white rounded-xl shadow-md overflow-hidden">
+                        <button class="accordion-button w-full flex justify-between items-center text-left p-5 font-semibold text-lg text-stone-700 hover:bg-stone-100 transition">
+                            <span>Eficiencia Energética y "Green Computing"</span>
+                            <span class="accordion-arrow transition-transform duration-300">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 border-t border-stone-200">
+                                <p class="text-stone-600">El compromiso de Supermicro con la sostenibilidad reduce los gastos operativos (OPEX) y el impacto ambiental<sup class="source-link"><a href="#source-4">4</a></sup>.</p>
+                                <ul class="mt-4 space-y-2 list-disc list-inside text-stone-600">
+                                    <li><strong>Fuentes de Alimentación:</strong> Eficiencia de nivel Titanium (96%+) para minimizar el desperdicio de energía<sup class="source-link"><a href="#source-4">4</a></sup>.</li>
+                                    <li><strong>Refrigeración Avanzada:</strong> Diseños optimizados para "free-air cooling" y sistemas preparados para refrigeración líquida que pueden reducir los costos energéticos hasta en un 40%<sup class="source-link"><a href="#source-4">4</a></sup>.</li>
+                                    <li><strong>Arquitectura Desagregada:</strong> Permite actualizar componentes individuales (CPU, memoria) sin reemplazar todo el chasis, reduciendo drásticamente los residuos electrónicos y los costos de actualización<sup class="source-link"><a href="#source-4">4</a></sup>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="adquisicion" class="py-12 md:py-16 mt-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-2xl md:text-3xl font-bold text-stone-900 mb-4">4. Guía de Adquisición</h3>
+                <p class="mt-4 text-lg text-stone-600 mb-12">Adquirir la infraestructura correcta es un paso crucial. Siga esta guía para asegurar una compra informada y optimizada para las necesidades de Gamma Media.</p>
+
+                <div class="grid md:grid-cols-3 gap-8 text-left">
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-teal-500">
+                        <h4 class="font-bold text-xl mb-2 text-teal-700">Paso 1: Definir</h4>
+                        <p class="text-stone-600">Utilice el <a href="#selector" class="text-teal-600 font-semibold hover:underline">Selector de Soluciones</a> para identificar las líneas y modelos de servidores más adecuadas para sus cargas de trabajo principales. Tenga claras sus necesidades de rendimiento, capacidad y escalabilidad.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-teal-500">
+                        <h4 class="font-bold text-xl mb-2 text-teal-700">Paso 2: Cotizar</h4>
+                        <p class="text-stone-600">Contacte a los distribuidores y revendedores autorizados de Supermicro. Proporcionen sus requisitos detallados para obtener cotizaciones personalizadas. No dude en comparar ofertas para optimizar costos.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-teal-500">
+                        <h4 class="font-bold text-xl mb-2 text-teal-700">Paso 3: Adquirir</h4>
+                        <p class="text-stone-600">Realice la compra a través de canales oficiales como la eStore de Supermicro o un socio autorizados. Considere negociar planes de servicio y soporte que se ajusten a sus necesidades operativas a largo plazo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-stone-800 text-stone-300 mt-16">
+        <div class="container mx-auto py-6 px-4 text-center">
+            <p>&copy; 2025 Supermicro. Herramienta de análisis creada con fines informativos.</p>
+            <p class="text-sm text-stone-400">La información se basa en el informe de Supermicro proporcionado.</p>
+        </div>
+        <section id="fuentes" class="container mx-auto py-8 px-4 text-left border-t border-stone-700 mt-8">
+            <h3 class="text-xl font-bold text-stone-200 mb-4">Fuentes de Información</h3>
+            <ul id="sources-list" class="text-sm space-y-2 text-stone-400">
+                </ul>
+        </section>
+    </footer>
+</body>
+</html>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
