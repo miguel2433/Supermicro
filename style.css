@@ -1,0 +1,37 @@
+    body {
+            font-family: 'Inter', sans-serif;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+       .chart-container {
+            position: relative;
+            margin: auto;
+            height: 45vh;
+            width: 100%;
+            max-width: 800px;
+            max-height: 500px;
+        }
+       .workload-btn.active, .tier-btn.active {
+            background-color: #0d9488;
+            color: #ffffff;
+            transform: scale(1.05);
+            box-shadow: 0 4px 14px 0 rgb(13 148 136 / 39%);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+       .accordion-button.open .accordion-arrow { /* Corrected selector for arrow rotation */
+            transform: rotate(180deg);
+        }
+       .source-link {
+            font-size: 0.75em;
+            vertical-align: super;
+            margin-left: 0.2em;
+            color: #0d9488;
+            text-decoration: none;
+            font-weight: 600;
+        }
+       .source-link:hover {
+            text-decoration: underline;
+        }
