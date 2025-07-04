@@ -77,7 +77,7 @@ import { workloads } from "./AreasTrabajo.js";
 
             const globalSources = [
                 { id: 'source-1', name: 'Supermicro Warranty Policy', url: 'https://www.supermicro.com/en/support/warranty' },
-                { id: 'source-2', name: 'Supermicro RMA Policy', url: 'https://www.supermicro.com/en/support/rma' },
+                { id: 'source-2', name: 'Supermicro RMA Service', url: 'https://www.supermicro.com/en/support/rma' },
                 { id: 'source-3', name: 'Supermicro Management Software', url: 'https://www.supermicro.com/en/solutions/management-software' },
                 { id: 'source-4', name: 'Supermicro Green Computing', url: 'https://www.supermicro.com/en/about/green-computing' },
                 { id: 'source-5', name: 'Supermicro eStore', url: 'https://store.supermicro.com/' },
