@@ -81,7 +81,7 @@ import { workloads } from "./AreasTrabajo.js";
                 { id: 'source-3', name: 'Supermicro Management Software', url: 'https://www.supermicro.com/en/solutions/management-software' },
                 { id: 'source-4', name: 'Supermicro Green Computing', url: 'https://www.supermicro.com/en/about/green-computing' },
                 { id: 'source-5', name: 'Supermicro eStore', url: 'https://store.supermicro.com/' },
-                { id: 'source-6', name: 'Supermicro Where to Buy', url: 'https://www.supermicro.com/en/where-to-buy' }
+                { id: 'source-6', name: 'Supermicro Where to Buy Partners', url: 'https://www.supermicro.com/en/wheretobuy?utm_source=corp&utm_medium=wheretobuy' }
             ];
             
             const tierButtonsContainer = document.getElementById('tier-buttons');
