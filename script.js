@@ -206,6 +206,7 @@ import { workloads } from "./AreasTrabajo.js";
                     }
                 }
             });
+
             
             const ctx = document.getElementById('comparisonChart').getContext('2d');
             let comparisonChart;

@@ -19,7 +19,7 @@ export const serverData = {
         specs: { proc: 'Intel Atom, Celeron, Core i', mem: 'Hasta 64GB DDR4', storage: 'M.2, SATA', network: '1GbE, WiFi' },
         tier: 'entry-level',
         models: [
-            { name: 'SYS-E100-9W', description: 'Mini servidor Edge fanless, ideal para IoT y aplicaciones embebidas.', url: 'https://www.supermicro.com/en/products/system/Embedded/Mini-1U/SYS-E100-9W' }
+            { name: 'SYS-E100-9W-L', description: 'Mini servidor Edge fanless, ideal para IoT y aplicaciones embebidas.', url: 'https://www.supermicro.com/en/products/system/box_pc/sys-e100-9w-l.cfm' }
         ]
     },
 
@@ -36,7 +36,7 @@ export const serverData = {
             { name: 'SYS-221P-C9R', description: 'Servidor 2U con dos sockets Xeon Scalable y cinco ranuras PCIe 5.0, diseñado para virtualización y tareas empresariales generales.', url: 'https://www.supermicro.com/en/products/system/mainstream/2u/sys-221p-c9r' },
             { name: 'SYS-620P-TRT', description: 'Servidor 2U de doble socket Intel con conectividad 10GbE, equilibrado para virtualización exigente y análisis.', url: 'https://www.supermicro.com/en/products/system/mainstream/2u/sys-620p-trt' },
             { name: 'SYS-621P-TR', description: 'Servidor 2U dual-socket Xeon de alto rendimiento, diseñado para entornos de virtualización y aplicaciones de servidor intensivas.', url: 'https://www.supermicro.com/en/products/system/mainstream/2u/sys-621p-tr' },
-            { name: 'AS-2024S-TR', description: 'Servidor rack 2U de doble socket AMD EPYC, diseñado para virtualización, aplicaciones de empresa y cargas intensivas de datos.', url: 'https://www.supermicro.com/en/products/system/Aplus/2U/AS-2024S-TR' }
+            { name: 'AS-2024S-TR',  description: 'Servidor rack 2U de doble socket AMD EPYC, diseñado para virtualización, aplicaciones de empresa y cargas intensivas de datos.', url: 'https://www.supermicro.com/en/products/system/Aplus/2U/AS-2024S-TR' }
         ]
     },
     mid_workstation_media: {
@@ -69,7 +69,7 @@ export const serverData = {
         specs: { proc: 'Intel Xeon, AMD EPYC', mem: 'Hasta 4TB DDR4', storage: 'All-Flash NVMe, Híbrido', network: 'Variable, hasta 25GbE' },
         tier: 'mid-range',
         models: [
-            { name: 'SSG-2029P-E1CR24L', description: 'Servidor 2U "Simply Double" con 24 bahías 2.5" SAS/SATA, ideal para almacenamiento de alta densidad.', url: 'https://www.supermicro.com/en/products/system/2U/2029/SSG-2029P-E1CR24L' }
+            { name: 'SSG-2029P-E1CR24L', description: 'Servidor 2U "Simply Double" con 24 bahías 2.5" SAS/SATA, ideal para almacenamiento de alta densidad.', url: 'https://www.supermicro.com/products/system/2U/2029/SSG-2029P-E1CR24L.cfm' }
         ]
     },
 
@@ -103,10 +103,10 @@ export const serverData = {
         title: 'Servidores Twin (Gama Alta)',
         description: 'Arquitecturas multinodo de densidad extrema para HPC, granjas de renderizado masivas y despliegues de nube a hiperescala, maximizando el cómputo por rack.',
         icon: '🧩',
-        specs: { proc: 'Múltiples Intel Xeon/AMD EPYC por nodo', mem: 'Hasta 6TB DDR4/DDR5 por nodo', storage: 'NVMe/SAS3/SATA3 por nodo', network: '10GbE, 25GbE, 100GbE' },
+        specs: { proc: 'Múltiples Intel Xeon/AMD EPYC por nodo', mem: 'Hasta 6TB DDR4/DDR5 por nodo', storage: 'NVMe/SAS3/SATA3 por nodo', network: '10GbE, 25GbE, 100GbE'  },
         tier: 'high-end',
         models: [
-            { name: 'SYS-220GP-TNR', description: 'BigTwin 2U con 4 nodos frontales, cada uno con doble procesador Intel Xeon, ideal para despliegues de cómputo de alta densidad y HCI.', url: 'https://www.supermicro.com/en/products/system/BigTwin/2U/SYS-220GP-TNR' },
+            { name: 'SYS-220GP-TNR', description: '2U Rackmount, cada uno con doble procesador Intel Xeon, ideal para despliegues de cómputo de alta densidad y HCI.', url: 'https://www.supermicro.com/en/products/system/BigTwin/2U/SYS-220GP-TNR' },
             { name: 'SYS-F622P-ACR', description: 'FatTwin 4U con hasta 8 nodos, ofreciendo una densidad de cómputo y almacenamiento sin precedentes para centros de datos a gran escala.', url: 'https://www.supermicro.com/en/products/system/FatTwin/4U/SYS-F622P-ACR' }
         ]
     },
@@ -118,7 +118,7 @@ export const serverData = {
         specs: { proc: 'Intel Xeon, AMD EPYC', mem: 'Hasta 4TB DDR4/DDR5', storage: 'Hasta 90 bahías 3.5" o All-Flash NVMe', network: '25GbE, 100GbE' },
         tier: 'high-end',
         models: [
-            { name: 'SSG-6049P-E1CR60L', description: 'Servidor de almacenamiento 4U con 60 bahías de carga superior, diseñado para almacenamiento de objetos a escala de petabytes.', url: 'https://www.supermicro.com/en/products/system/Storage/4U/SSG-6049P-E1CR60L' },
+            { name: 'SSG-6049P-E1CR60L', description: 'Servidor de almacenamiento 4U con 60 bahías de carga superior, diseñado para almacenamiento de objetos a escala de petabytes.', url: 'https://www.supermicro.com/en/products/system/4u/6049/ssg-6049p-e1cr60l.cfm' },
             { name: 'SSG-610P-ACR12N4L', description: 'Servidor de almacenamiento 1U All-Flash NVMe con 12 bahías U.2, ideal para bases de datos de alto rendimiento y almacenamiento de baja latencia.', url: 'https://www.supermicro.com/en/products/system/MegaDC/1U/SSG-610P-ACR12N4L' }
         ]
     },
@@ -141,7 +141,7 @@ export const serverData = {
         specs: { proc: 'Intel Xeon D, AMD EPYC Embedded', mem: 'Hasta 512GB DDR4', storage: 'NVMe, SATA', network: '10GbE, 25GbE, 5G/Telecom' },
         tier: 'high-end',
         models: [
-            { name: 'SYS-E403-12P', description: 'Servidor Edge de alto rendimiento con soporte para GPUs, ideal para inferencia de IA y procesamiento de video en el borde.', url: 'https://www.supermicro.com/en/products/system/Embedded/Mini-Tower/SYS-E403-12P' }
+            { name: 'SYS-E403-12P-FN2T', description: 'Servidor Edge de alto rendimiento con soporte para GPUs, ideal para inferencia de IA y procesamiento de video en el borde.', url: 'https://www.supermicro.com/en/products/system/iot/box_pc/sys-e403-12p-fn2t' }
         ]
     }
 };
