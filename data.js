@@ -127,7 +127,7 @@ export const serverData = {
         title: 'Servidores CloudDC (Gama Alta)',
         description: 'Plataformas optimizadas para infraestructuras de nube a escala de centro de datos, ofreciendo flexibilidad y eficiencia para IaaS y HPC en entornos de nube privada/híbrida.',
         icon: '☁️',
-        specs: { proc: 'Dual Intel Xeon 6700/6500, Dual AMD EPYC', mem: 'Hasta 32 DIMMs DDR5', storage: 'NVMe/SAS/SATA Hot-swap', network: '1GbE, AIOM Option, 25GbE+' },
+        specs: { proc: 'Dual Intel Xeon 6700/6500, Dual AMD EPYC', mem: 'Hasta 8 TB DDR5', storage: 'NVMe/SAS/SATA Hot-swap', network: '1GbE, AIOM Option, 25GbE+' },
         tier: 'high-end',
         models: [
             { name: 'SYS-621C-TN12R', description: 'Servidor CloudDC 2U con doble procesador Intel Xeon Scalable de 5ª/4ª generación, alta densidad de almacenamiento y opciones de red flexibles.', url: 'https://www.supermicro.com/en/products/system/CloudDC/2U/SYS-621C-TN12R' }
