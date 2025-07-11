@@ -21,7 +21,7 @@ import { workloads } from "./AreasTrabajo.js";
                         12,    // high_ultra (12TB DDR5)
                         6,     // high_twin (6TB per node)
                         4,     // high_storage_petascale (4TB)
-                        32,    // high_clouddc (32 DIMMs * 256GB/DIMM = 8TB, but some sources say more, let's use 32TB as a high-end estimate for CloudDC scale)
+                        8,    // high_clouddc (32 DIMMs * 256GB/DIMM = 8TB, but some sources say more, let's use 32TB as a high-end estimate for CloudDC scale)
                         0.512  // high_edge_telecom (512GB)
                     ],
                     title: 'Capacidad Máxima de Memoria (TB)'
